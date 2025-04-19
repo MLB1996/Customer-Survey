@@ -1,0 +1,108 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  background-color: #F7E0D4;
+  margin: 0;
+}
+
+pre {
+  background-color: #1489B8;
+  display: block;
+  font-size: 105%;
+  border: 2px solid #1489B8;
+  border-radius: 5px;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+#navbar {
+  background-color: #092834; /* Dark blue */
+  color: #F7E0D4; /* Light text for contrast */
+  width: 25%;
+  position: fixed; /* Keep navbar fixed */
+  height: 100%;
+  overflow: auto;
+  font-family: Tahoma, sans-serif;
+}
+
+#navbar header {
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: #347B98; /* Medium blue */
+  color: #F7E0D4; /* Light text */
+}
+
+#navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#navbar li a {
+  display: block;
+  color: #F7E0D4; /* Light text */
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  background-color: #1489B8; /* Brighter blue for hover effect */
+  color: #FC600A; /* Bright orange for contrast */
+}
+
+#navbar li a.active {
+  background-color: #FC600A; /* Bright orange for active link */
+  color: #F7E0D4; /* Light text */
+}
+
+/* Main Content Styles */
+main {
+  margin-left: 25%; /* Space for the navbar */
+  padding: 20px;
+  background-color: #F7E0D4; /* Light background color */
+}
+
+.main-section {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #347B98; /* Medium blue */
+  color: #F7E0D4; /* Light text */
+  border-radius: 5px;
+}
+
+.main-section header {
+  background-color: #1489B8; /* Brighter blue for headers */
+  color: #FC600A; /* Bright orange for text */
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main-section p, .main-section ul, .main-section code {
+  color: #F7E0D4; /* Light text */
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 900px) {
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  #navbar li a {
+    float: left;
+    padding: 15px;
+  }
+
+  main {
+    margin-left: 0;
+    padding-top: 70px; /* Ensure some space from top */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #navbar li a {
+    text-align: center;
+    float: none;
+  }
+}

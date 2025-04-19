@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<title>Customer Feedback Survey</title>
+
+   <style> .background { background-image: url('https://plus.unsplash.com/premium_vector-1689096638492-a9edb03fef82?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; height: 100vh; width: 100%; opacity: 0.; position: absolute; top: 0; left: 0; z-index: -1; /* Ensure background is behind other content */ } 
+   </style> 
+   </head> 
+   <body> 
+     <div class="background"></div>
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">We would love to hear your thoughts, suggestions, concerns or problems with anything so we can improve!</p>
+
+  <form id="survey-form" method="POST">
+    <label id="name-label" for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+    <label id="email-label" for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+    <label id="number-label" for="number">Age:</label>
+    <input type="number" id="number" name="number" placeholder="Enter your age" min="10" max="100" required><br>
+
+    <fieldset>
+      <legend>Which option best describes your current role?</legend>
+      <label for="dropdown"></label>
+      <select id="dropdown" name="role" required>
+        <option value="">Select an option</option>
+        <option value="student">Student</option>
+        <option value="full_time_job">Full Time Job</option>
+        <option value="full_time_learner">Full Time Learner</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Would you recommend our product?</legend>
+      <label><input type="radio" name="recommend" value="Definitely" required>Definitely</label><br>
+      <label><input type="radio" name="recommend" value="Maybe">Maybe</label><br>
+      <label><input type="radio" name="recommend" value="Not Sure">Not Sure</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select all features you are interested in:</legend>
+      <label><input type="checkbox" name="features" value="Real-time Notifications">Real-time Notifications</label><br>
+      <label><input type="checkbox" name="features" value="Customizable Dashboard">Customizable Dashboard</label><br>
+      <label><input type="checkbox" name="features" value="Advanced Analytics">Advanced Analytics</label><br>
+      <label><input type="checkbox" name="features" value="User-Friendly Interface">User-Friendly Interface</label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Any comments or suggestions?</legend>
+      <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+    </fieldset>
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</body>
+</html>
